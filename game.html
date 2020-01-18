@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Family Fued</title>
+
+    <!-- Latest compiled and minified CSS & JS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0/flatly/bootstrap.min.css" rel="stylesheet">
+    <!--<link rel="stylesheet" href="./public/css/game.css" media="screen" title="no title">-->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+    <!-- cited game board template: https://codepen.io/iezer/full/wpbEjP -->
+
+    <div class="gameContainer">
+        <div class='gameBoard'>
+
+            <!--- Scores --->
+            <div class='score' id='boardTimer'></div>
+            <!-- <div class='score' id='team1'>0</div>
+    <div class='score' id='team2'>0</div> -->
+
+            <br>
+            <!--- Question --->
+            <div class='questionHolder'>
+                <span id='question' class='question'>Name something you find in your Christmas stocking</span>
+            </div>
+
+            <br>
+
+            <!--- Answers --->
+            <div class='colHolder'>
+                <table>
+                    <div class='col1'>
+                        <div class='cardHolder'>
+                            <div class='card' class="cardOne">
+                                <div class='card__face front'>
+                                    <span class='DBG'>1</span>
+                                </div>
+                                <div class='card__face back DBG'>
+                                    <span class="answer1">coal</span>
+                                    <b class='LBG' class='answer_score_1'>20</b>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class='col2'>
+                        <div class='cardHolder'>
+                            <div class='card' class="cardFour">
+                                <div class='card__face front'>
+                                    <span class='DBG'>4</span>
+                                </div>
+                                <div class='card__face back DBG'>
+                                    <span class="answer4">gift</span>
+                                    <b class='LBG'>10</b>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class='col1'>
+                        <div class='cardHolder'>
+                            <div class='card'>
+                                <div class='card__face front'>
+                                    <span class='DBG'>2</span>
+                                </div>
+                                <div class='card__face back DBG'>
+                                    <span class="answer2">candy</span>
+                                    <b class='LBG'>10</b>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class='col2'>
+                        <div class='cardHolder'>
+                            <div class='card'>
+                                <div class='card__face front'>
+                                    <span class='DBG'>5</span>
+                                </div>
+                                <div class='card__face back DBG'>
+                                    <span class="answer5">socks</span>
+                                    <b class='LBG'>10</b>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class='col1'>
+                        <div class='cardHolder'>
+                            <div class='card'>
+                                <div class='card__face front'>
+                                    <span class='DBG'>3</span>
+                                </div>
+                                <div class='card__face back DBG'>
+                                    <span class="answer3">money</span>
+                                    <b class='LBG'>20</b>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class='col2'>
+                        <div class='cardHolder'>
+                            <div class='card'>
+                                <div class='card__face front'>
+                                    <span class='DBG'>6</span>
+                                </div>
+                                <div class='card__face back DBG'>
+                                    <span class="answer6">lottery ticket</span>
+                                    <b class='LBG'>20</b>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </table>
+            </div>
+
+            <br>
+            <br>
+
+            <!-- <div class='cardHolder empty'>
+          <div></div>
+        </div>
+      </div> -->
+
+
+            <!--- Buttons --->
+            <div class='btnHolder'>
+                <!-- <div id='awardTeam1' data-team='1' class='button'>Award Team 1</div>
+              <div id='newQuestion' class='button'>New Question</div>
+              <div id='awardTeam2' data-team='2' class='button'>Award Team 2</div> -->
+
+                <form class="form-inline" class="form-group">
+                    <label id='awardTeam1' class='button' for="playerAnswer-input">Your Guess!</label>
+                    <input type="text" id="playerAnswer-input" onkeydown="buttonAction()">
+
+                    <input class='button' id="add-playerAnswer" type="submit" value="Submit" class="add-playerAnswer"
+                        disabled>
+                    <!-- <button class='button' id="add-playerAnswer" id='awardTeam2' type="submit" value="Submit"
+            class="add-playerAnswer">Submit</button> -->
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- !!!!!!!! SCORES GO HERE !!!!!!!!!!!!! -->
+
+    <!-- Use hide and show function -->
+    <div class="totalScoreContainer">
+        <div class='gameBoard'>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class='questionHolder'>
+                        <span class='question'>Check Out Your Scores!</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scores -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class='colHolder'>
+
+                        <div class="roundOne">
+                            <h4 class="scoreRound_1"><img src="./images/scoreRound1.jpg" height="40px"
+                                    alt="Responsive image"> :30
+                            </h4>
+                        </div>
+
+                        <hr class="scoreHrColor">
+
+                        <div class="roundTwo">
+                            <h4 class="scoreRound_2"><img src="./images/scoreRound2.jpg" height="40px"
+                                    alt="Responsive image"> :40
+                            </h4>
+                        </div>
+
+                        <hr class="scoreHrColor">
+
+                        <div class="roundThree">
+                            <h4 class="scoreRound_3"><img src="./images/scoreRound3.jpg" height="40px"
+                                    alt="Responsive image"> :50
+                            </h4>
+                        </div>
+
+                        <hr class="scoreHrColor">
+
+                        <div class="finalTotalScore">
+                            <h4 class="totalScore"><img src="./images/scoreTotal.jpg" height="25px"
+                                    alt="Responsive image"> :120
+                            </h4>
+                        </div>
+                        <hr class="scoreHrColor">
+
+                        <br>
+                        <!-- Cited:https://www.w3schools.com/howto/howto_css_social_media_buttons.asp  -->
+                        <!-- Social Media buttons for player to share their Family Fued Scores -->
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="social-buttons">
+                                    <h5>Share Your Scores!!</h5>
+                                    <a href="http://twitter.com/share" target="_blank" class="fa fa-twitter"></a>
+                                    <a href="https://www.instagram.com" target="_blank" class="fa fa-instagram"></a>
+                                    <a href="http://www.facebook.com/sharer" target="_blank" class="fa fa-facebook"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+
+            <div class='btnHolder'>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div id="play-again-box">
+                            <a href="/game" id="play-again-btn" class='button'><span></span>Play Again!!</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div id="suggestions-box">
+                            <a href="/updateGame" id="make-game-better-btn" class='button'><span></span>Update
+                                Game!!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.0/moment.min.js" type="text/javascript">
+    </script>
+    <script src="./game.js" type="text/javascript"></script>
+    <!--<script src="js/game.js" type="text/javascript"></script>-->
+
+</body>
+
+</html>

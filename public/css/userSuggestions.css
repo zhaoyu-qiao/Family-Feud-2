@@ -1,0 +1,233 @@
+body {
+    background-color: #024ab8;
+    /* background-color: #26558b; */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.media {
+    background: url(../images/2nd-light-blue-family-fued-cover.png) repeat;
+    background-size: cover;
+    color: white;
+    font-size: bold;
+    width: 100%;
+}
+
+/* Animated Word Cited: https://codepen.io/jackarmley/pen/WvGJPB/ */
+@import url(https://fonts.googleapis.com/css?family=Montserrat:700);
+@import url(//db.onlinewebfonts.com/c/e0d44e5f59ffca21ff5c4ede2426313a?family=Clarendon);
+
+h1 span {
+    /* margin: auto; */
+    color: white;
+    font: 100 normal 1em/1.5 'Montserrat', sans-serif;
+    font-weight: bold;
+    /* text-shadow: 1px 2px #0e54a5, 2px 4px #0e54a5, 3px 6px #0e54a5; */
+    /* font-size: 20px; */
+    /* font-family: impact; */
+}
+
+h1 {
+    /* text-shadow: 1px 1px 0 white, 1px 1px 0 white, 1px 1px 0 white, 1px 1px 0 white; */
+    font-weight: bold;
+    /* font: 'Claredon', sans-serif; */
+    font: 'Montserrat', sans-serif;
+    font-size: 2.5em;
+    margin-left: 180px;
+    /* margin-right: 150px; */
+    /* text-indent: 200px; */
+    /* position: relative; */
+}
+
+h2 {
+    /* text-indent: 130px; */
+    position: relative;
+    font: 'Montserrat', sans-serif;
+    /* font-family: impact; */
+    margin-left: 210px;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.display-6 {
+    color: #0e54a5;
+    font-weight: bold;
+    text-align: center;
+}
+
+.my-4 {
+    align-content: center;
+}
+
+.list-group {
+    background: white;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+
+/* Fill word animation Cited: https://codepen.io/zitrusfrisch/pen/fjbal */
+h1 {
+    text-transform: uppercase;
+    letter-spacing: .5em;
+    display: inline-block;
+    /* border: 4px double rgba(255, 255, 255, 0.25); */
+    /* border-width: 4px 0; */
+    padding: 1.5em 0em;
+    position: absolute;
+    /* top: 18%;
+    left: 50%; */
+    width: 40em;
+    margin: 0 0 0 -20em;
+    font: 200 3.5em/1 "Oswald", sans-serif;
+    font-weight: bold;
+    letter-spacing: 0;
+    padding: .25em 0 .325em;
+    display: block;
+    margin: 0 auto;
+    text-shadow: 0 0 90px white;
+    /* Clip Background Image */
+    background: url(../images/silver-sparkle-background.jpg);
+    /* background: url(http://f.cl.ly/items/010q3E1u3p2Q0j1L1S1o/animated_text_fill.png) repeat-y; */
+    -webkit-background-clip: text;
+    background-clip: text;
+    /* Animate Background Image */
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: aitf 80s linear infinite;
+    /* Activate hardware acceleration for smoother animations */
+    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+}
+
+/* Animate Background Image */
+@-webkit-keyframes aitf {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+/* Cited: https://harvard.bootcampcontent.com/Harvard-Coding-Boot-Camp/hu-cam-fsf-pt-09-2019-u-c/tree/master/Week_15/01-Activities/09-Sequelize-Update-Delete */
+.todo-list {
+    margin: 0 auto;
+    margin-top: 75px;
+}
+
+input.new-item:focus {
+    outline: none;
+}
+
+.list-group-item>button.delete,
+.list-group-item>button.complete {
+    float: right;
+    height: 25px;
+    margin-left: 5px;
+}
+
+.edit {
+    width: 100%;
+}
+
+button.delete {
+    color: white;
+    background-color: black;
+}
+
+/* Cited the gold buttons: https://codepen.io/rcherem/pen/Kxpgdr */
+#add-new-questn-btn,
+#submit-new-questn-btn {
+    align-content: center;
+    display: inline-block;
+    /* margin-top: 130px; */
+    /* margin-left: -25px; */
+    position: relative;
+    width: 100px;
+    outline: none;
+    font-family: inherit;
+    font-size: 1em;
+    box-sizing: border-box;
+    border: none;
+    border-radius: .3em;
+    height: 2.75em;
+    line-height: 2.5em;
+    text-transform: uppercase;
+    padding: 0 1em;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 3px 6px rgba(110, 80, 20, .4),
+        inset 0 -2px 5px 1px rgba(139, 66, 8, 1),
+        inset 0 -1px 1px 3px rgba(250, 227, 133, 1);
+    background-image: linear-gradient(160deg, #a54e07, #b47e11, #fef1a2, #bc881b, #a54e07);
+    border: 1px solid #a55d07;
+    color: rgb(120, 50, 5);
+    font-weight: bolder;
+    text-shadow: 0 2px 2px rgba(250, 227, 133, 1);
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    background-size: 100% 100%;
+    background-position: center;
+}
+
+#add-new-questn-btn:focus,
+#add-new-questn-btn:hover,
+#submit-new-questn-btn:focus,
+#submit-new-questn-btn:hover {
+    background-size: 150% 150%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23),
+        inset 0 -2px 5px 1px #b17d10,
+        inset 0 -1px 1px 3px rgba(250, 227, 133, 1);
+    border: 1px solid rgba(165, 93, 7, .6);
+    color: rgba(120, 50, 5, .8);
+}
+
+#add-new-questn-btn:active,
+#submit-new-questn-btn:active {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 3px 6px rgba(110, 80, 20, .4),
+        inset 0 -2px 5px 1px #b17d10,
+        inset 0 -1px 1px 3px rgba(250, 227, 133, 1);
+}
+
+#add-new-questn-btn {
+    margin-top: 130px;
+}
+
+#submit-new-questn-btn {
+    width: 150px;
+    color: rgb(120, 50, 5);
+    font-weight: bolder;
+    margin-left: 300px;
+    position: relative;
+}
+
+.modal-footer {
+    display: block;
+    text-align: center;
+    /* float: left; */
+}
+
+#play-again-btn,
+#modal-close-btn {
+    font-size: 1.2em;
+}
+
+/* Media Queries */
+@media screen and (max-width: 980px) {
+    #add-new-questn-btn {
+        margin-top: 160px;
+        width: 70px;
+    }
+
+    #submit-new-questn-btn {
+        margin-left: 160px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #add-new-questn-btn {
+        margin-top: 130px;
+    }
+
+    #submit-new-questn-btn {
+        align-content: center;
+    }
+}

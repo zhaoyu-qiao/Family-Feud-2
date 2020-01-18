@@ -1,0 +1,509 @@
+/* Cited: http://www.css3transition.com/toggle-animation-login-sign-form/
+    Animation toggle between sign up and sign in form  */
+@import "https://fonts.googleapis.com/css?family=Oswald|Roboto";
+
+body {
+    font-family: "Roboto", sans-serif;
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+body::before {
+    content: "";
+    background: url(../images/2nd-family-fued-cover.png) no-repeat center center;
+    background-size: cover;
+    position: fixed;
+    margin: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.table-cell h2 {
+    margin-top: -30px;
+    /* align-content: center;
+        text-indent: 30px; */
+    /* text-align: center;
+        display: inline-block; */
+    /* background: -webkit-linear-gradient(160deg, #a54e07, #b47e11, #bc881b, #bc881b, #a54e07);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent; */
+}
+
+.table {
+    display: table;
+    height: 100%;
+    width: 100%;
+}
+
+.table-cell {
+    display: table-cell;
+    transition: all 0.5s ease 0s;
+    vertical-align: middle;
+}
+
+/* .container {
+        background-color: rgb(153, 158, 222);
+        height: 320px;
+        margin: -160px auto 0;
+        position: relative;
+        top: 50%;
+        transition: all 0.5s ease 0s;
+        width: 600px;
+    } */
+.container {
+    /* background-color: rgb(153, 158, 222); */
+    /* height: 320px; */
+    height: 525px;
+    margin: -160px auto 0;
+    position: relative;
+    /* top: 50%; */
+    top: 35%;
+    padding-left: 115px;
+    padding-right: 115px;
+    transition: all 0.7s ease 0s;
+    width: 605px;
+    /* background: #1e5799; */
+    background: #7db9e8;
+    background: -moz-linear-gradient(top, #7db9e8 0%, #207cca 49%, #2989d8 50%, #1e5799 100%);
+    background: -webkit-linear-gradient(top, #7db9e8 0%, #207cca 49%, #2989d8 50%, #1e5799 100%);
+    background: linea-gradient(to bottom, #7db9e8 0%, #207cca 49%, #2989d8 50%, #1e5799 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#7db9e8', endColorstr='#1e5799', GradientType=0);
+    /* border: 5px solid white; */
+    box-shadow: 0px 0px 15px 7px;
+}
+
+#signInSignUp-form {
+    height: 525px;
+    margin-top: 30px;
+}
+
+.container .box {
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.container .box::before,
+.container .box::after {
+    /* background-color: rgb(146, 151, 224); */
+    content: " ";
+    height: 290px;
+    left: 152px;
+    position: absolute;
+    top: 50px;
+    transform: rotateX(52deg) rotateY(15deg) rotateZ(-38deg);
+    transition: all 0.5s ease 0s;
+    width: 300px;
+}
+
+/* .container .box::after { */
+/* background-color: rgb(165, 170, 228); */
+/* height: 180px;
+        left: 80px;
+        top: -10px;
+        width: 320px;
+    } */
+.container .container-forms {
+    position: relative;
+    text-align: center;
+}
+
+.container .btn {
+    /* background-color: rgb(255, 115, 179);
+        color: rgb(255, 255, 255); */
+    cursor: pointer;
+    margin: 0 auto;
+    opacity: 1;
+    text-align: center;
+    transition: all 0.5s ease 0s;
+    width: 60px;
+}
+
+.container .btn:hover {
+    opacity: 0.7;
+}
+
+/* .container .btn,
+    .container input {
+        border-radius: 30px;
+        padding: 10px 15px;
+    } */
+.container .btn {
+    border-radius: 30px;
+    padding: 10px 15px;
+}
+
+.container input {
+    border: 1px solid rgb(243, 243, 243);
+    /* border-bottom: 1px solid #1e5799; */
+    box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.03);
+    /* color: rgb(102, 102, 102); */
+    color: black;
+    display: block;
+    margin: 0 auto 15px;
+    transition: all 0.3s ease 0s;
+    width: 220px;
+    padding: 10px 15px;
+    border-radius: 30px;
+}
+
+.container input:hover {
+    border: 2px solid #1e5799;
+}
+
+.container input:focus {
+    outline: 0;
+}
+
+.container .container-forms .container-info {
+    font-size: 0;
+    text-align: left;
+}
+
+.container .container-forms .container-info .info-item {
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    font-size: 16px;
+    height: 320px;
+    opacity: 1;
+    text-align: center;
+    transition: all 0.3s ease 0s;
+    vertical-align: top;
+    width: 300px;
+}
+
+.container .container-forms .container-info .info-item p {
+    font-size: 20px;
+    margin: 20px;
+}
+
+.container .container-forms .container-info .info-item .btn {
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.container .container-forms .container-info .info-item .table-cell {
+    padding-right: 35px;
+}
+
+.container .container-forms .container-info .info-item:nth-child(2) .table-cell {
+    padding-left: 35px;
+    padding-right: 0;
+}
+
+.container .container-form {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+    height: 380px;
+    left: 30px;
+    overflow: hidden;
+    position: absolute;
+    top: -30px;
+    transition: all 0.5s ease 0s;
+    width: 305px;
+}
+
+/* .container .container-form::before {
+        color: rgb(83, 86, 173);
+        content: "✔";
+        font-size: 130px;
+        left: 160px;
+        opacity: 0;
+        position: absolute;
+        top: -50px;
+        transition: all 0.5s ease 0s;
+    } */
+/* .container .container-form .btn {
+        box-shadow: 5px 5px 10px rgba(255, 115, 179, 0.5);
+        display: block;
+        margin-top: 30px;
+        position: relative;
+        width: 120px;
+    } */
+/* Cited the gold sign in and sign up button: https://codepen.io/rcherem/pen/Kxpgdr */
+.container .container-form .btn {
+    align-content: center;
+    display: inline-block;
+    margin-top: 30px;
+    /* margin-left: 90px; */
+    position: relative;
+    width: 120px;
+    outline: none;
+    font-family: inherit;
+    font-size: 1em;
+    box-sizing: border-box;
+    border: none;
+    border-radius: .3em;
+    height: 2.75em;
+    line-height: 2.5em;
+    text-transform: uppercase;
+    padding: 0 1em;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 3px 6px rgba(110, 80, 20, .4),
+        inset 0 -2px 5px 1px rgba(139, 66, 8, 1),
+        inset 0 -1px 1px 3px rgba(250, 227, 133, 1);
+    background-image: linear-gradient(160deg, #a54e07, #b47e11, #fef1a2, #bc881b, #a54e07);
+    border: 1px solid #a55d07;
+    color: rgb(120, 50, 5);
+    text-shadow: 0 2px 2px rgba(250, 227, 133, 1);
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    background-size: 100% 100%;
+    background-position: center;
+}
+
+.golden-btn:focus,
+.golden-btn:hover {
+    background-size: 150% 150%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23),
+        inset 0 -2px 5px 1px #b17d10,
+        inset 0 -1px 1px 3px rgba(250, 227, 133, 1);
+    border: 1px solid rgba(165, 93, 7, .6);
+    color: rgba(120, 50, 5, .8);
+}
+
+.golden-btn:active {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 3px 6px rgba(110, 80, 20, .4),
+        inset 0 -2px 5px 1px #b17d10,
+        inset 0 -1px 1px 3px rgba(250, 227, 133, 1);
+}
+
+.container .form-item {
+    height: 100%;
+    left: 0;
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    transition: all 0.5s ease 0s;
+    width: 100%;
+}
+
+.container .form-item.sign-up {
+    left: -100%;
+    opacity: 0;
+    position: absolute;
+}
+
+.container.log-in .box::before {
+    height: 265px;
+    left: 180px;
+    position: absolute;
+    top: 62px;
+}
+
+.container.log-in .box::after {
+    height: 220px;
+    left: 192px;
+    top: 22px;
+    width: 324px;
+}
+
+.container.log-in .container-form {
+    left: 265px;
+}
+
+.container.log-in .container-form .form-item.sign-up {
+    left: 0;
+    opacity: 1;
+}
+
+.container.log-in .container-form .form-item.log-in {
+    left: -100%;
+    opacity: 0;
+}
+
+.container.active {
+    height: 140px;
+    margin-top: -70px;
+    width: 260px;
+}
+
+/* .container.active .container-form {
+        height: 200px;
+        left: 30px;
+        width: 200px;
+    } */
+/* .container.active .container-form::before {
+        color: rgb(83, 86, 173);
+        content: "✔";
+        font-size: 130px;
+        left: 51px;
+        opacity: 1;
+        position: absolute;
+        top: 5px;
+    } */
+/* .container.active input,
+    .container.active .btn,
+    .container.active .info-item {
+        display: none;
+        height: 0;
+        margin: 0 auto;
+        opacity: 0;
+        padding: 0;
+    } */
+.container.active .form-item {
+    height: 100%;
+}
+
+/* .container.active .container-forms .container-info .info-item {
+        height: 0;
+        opacity: 0;
+    } */
+/* .rabbit {
+        bottom: 20px;
+        fill: rgb(255, 255, 255);
+        height: 50px;
+        position: absolute;
+        right: 20px;
+        width: 50px;
+        z-index: 3;
+    } */
+.missmatch {
+    color: red;
+}
+
+.signInPassVal {
+    color: red;
+    /* display: inline block; */
+    /* text-align: justify; */
+    /* font-size: 10px; */
+}
+
+/**
+     * Popup Modal - (_layout.scss) Cited: http://www.styleshout.com/
+     * ------------------------------------------------------------------
+     */
+.popup-modal {
+    max-width: 550px;
+    background: #FFFFFF;
+    position: relative;
+    margin: 0 auto;
+}
+
+.popup-modal .media {
+    position: relative;
+}
+
+.popup-modal img {
+    vertical-align: bottom;
+}
+
+.popup-modal .description-box {
+    padding: 1.8rem 3.6rem 3rem;
+}
+
+.popup-modal .description-box h4 {
+    font-family: "poppins-bold", sans-serif;
+    font-size: 1.5rem;
+    line-height: 2.4rem;
+    margin-bottom: .6rem;
+}
+
+.popup-modal .description-box p {
+    font-family: "poppins-regular", sans-serif;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    margin-bottom: 12px;
+}
+
+.popup-modal .categories {
+    font-family: "poppins-bold", sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    display: block;
+    text-align: left;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.popup-modal .link-box {
+    width: 100%;
+    overflow: hidden;
+    background: #000000;
+}
+
+.popup-modal .link-box a {
+    font-family: "poppins-bold", sans-serif;
+    font-size: 1.2rem;
+    line-height: 6rem;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    cursor: pointer;
+    display: block;
+    text-align: center;
+    float: left;
+    width: 50%;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.popup-modal .link-box a:first-child {
+    border-right: 1px solid rgba(200, 200, 200, 0.1);
+}
+
+.popup-modal .link-box a:hover {
+    background: #cc005f;
+    border: none;
+}
+
+@media only screen and (max-width:600px) {
+    .popup-modal {
+        width: auto;
+        margin: 0 20px;
+    }
+}
+
+/* Password Validation */
+/* The message box is shown when the user clicks on the password field */
+#message {
+    display: none;
+    background: white;
+    color: #000;
+    position: relative;
+    padding: 10px;
+    text-align: left;
+    /* margin-top: 10px; */
+}
+
+#message p {
+    padding: 10px 30px;
+    font-size: 15px;
+    text-align: left;
+}
+
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+    color: #1e5799;
+}
+
+.valid:before {
+    position: relative;
+    left: -35px;
+    content: "✔";
+}
+
+/* Add a red text color and an "x" when the requirements are wrong */
+.invalid {
+    color: black;
+}
+
+.invalid:before {
+    position: relative;
+    left: -35px;
+    content: "✖";
+}

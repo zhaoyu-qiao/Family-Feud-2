@@ -1,0 +1,129 @@
+.add-update-container {
+    /* background-color: rgb(153, 158, 222); */
+    /* height: 320px; */
+    height: 520px;
+    margin: -160px auto 0;
+
+    position: relative;
+    /* top: 50%; */
+    top: 150px;
+    padding-left: 115px;
+    padding-right: 115px;
+    transition: all 0.7s ease 0s;
+    width: 750px;
+    /* background: #1e5799; */
+    background: ivory;
+    /* background: #7db9e8;
+    background: -moz-linear-gradient(top, #7db9e8 0%, #207cca 49%, #2989d8 50%, #1e5799 100%);
+    background: -webkit-linear-gradient(top, #7db9e8 0%, #207cca 49%, #2989d8 50%, #1e5799 100%);
+    background: linea-gradient(to bottom, #7db9e8 0%, #207cca 49%, #2989d8 50%, #1e5799 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#7db9e8', endColorstr='#1e5799', GradientType=0); */
+    /* border: 5px solid white; */
+    box-shadow: 0px 0px 15px 7px;
+}
+
+
+
+
+/* Cited the gold sign in and sign up button: https://codepen.io/rcherem/pen/Kxpgdr */
+button {
+    align-content: center;
+    display: inline-block;
+    /* margin-top: 30px; */
+    /* margin-left: -25px; */
+    position: relative;
+    width: 150px;
+    outline: none;
+    font-family: inherit;
+    font-size: 1em;
+    box-sizing: border-box;
+    border: none;
+    border-radius: .3em;
+    height: 2.75em;
+    line-height: 2.5em;
+    text-transform: uppercase;
+    padding: 0 1em;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 3px 6px rgba(110, 80, 20, .4),
+        inset 0 -2px 5px 1px rgba(139, 66, 8, 1),
+        inset 0 -1px 1px 3px rgba(250, 227, 133, 1);
+    background-image: linear-gradient(160deg, #a54e07, #b47e11, #fef1a2, #bc881b, #a54e07);
+    border: 1px solid #a55d07;
+    color: rgb(120, 50, 5);
+    text-shadow: 0 2px 2px rgba(250, 227, 133, 1);
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    background-size: 100% 100%;
+    background-position: center;
+}
+
+button:focus,
+button:hover {
+    background-size: 150% 150%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23),
+        inset 0 -2px 5px 1px #b17d10,
+        inset 0 -1px 1px 3px rgba(250, 227, 133, 1);
+    border: 1px solid rgba(165, 93, 7, .6);
+    color: rgba(120, 50, 5, .8);
+}
+
+button:active {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 3px 6px rgba(110, 80, 20, .4),
+        inset 0 -2px 5px 1px #b17d10,
+        inset 0 -1px 1px 3px rgba(250, 227, 133, 1);
+}
+
+
+
+
+.col-2 {
+    margin-top: 35px;
+    position: relative;
+}
+
+.form-control {
+    height: 40px;
+}
+
+
+h1,
+h3 {
+    margin: 0%;
+}
+
+.modal-footer {
+    display: block;
+    text-align: center;
+    /* float: left; */
+}
+
+
+.questn-suggestn-container {
+    margin-left: 300px;
+    position: relative;
+}
+
+.jumbotron {
+    width: 800px;
+}
+
+#view-suggestions {
+    margin-left: -15px;
+    position: relative;
+
+}
+
+#add-update-questn-btn,
+#add-new-questn-btn {
+    margin-left: -25px;
+    position: relative;
+}
+
+
+/* .modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 400px;
+
+} */

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign Up /Sign In</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+        </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+        </script>
+    <!-- <link rel="stylesheet" href="css/index.css" media="screen" title="no title"> -->
+    <link rel="stylesheet" href="css/signUp.css">
+    <!-- <script src="js/index.js" type="text/javascript"></script> -->
+</head>
+
+<body>
+    <!-- Cited: http://www.css3transition.com/toggle-animation-login-sign-form/ -->
+    <!-- Animation toggle between sign up and sign in form -->
+    <div class="container">
+        <div class="box"></div>
+        <div class="container-forms">
+            <div class="container-info">
+                <div class="info-item">
+                    <div class="table">
+                        <div class="table-cell">
+                            <p>
+                                Have an account?
+                            </p>
+                            <div class="btn">
+                                Log in
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="table">
+                        <div class="table-cell">
+                            <p>
+                                Don't have an account?
+                            </p>
+                            <div class="btn">
+                                Sign up
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-form" id="signInSignUp-form">
+                <div class="form-item log-in">
+                    <div class="table">
+                        <div class="table-cell">
+                            <h2>Sign Into Your Account</h2>
+                            <br>
+                            <form class="login">
+                                <div class="form-group">
+                                    <input name="Username" id="sign-in-username-input" placeholder="Username *"
+                                        type="text" required />
+                                </div>
+                                <div class="form-group">
+                                    <input name="Password" id="sign-in-password-input" placeholder="Password *"
+                                        type="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{10,}" required />
+                                </div>
+                                <div class="signInPassVal"></div>
+                                <div class="error-group">
+                                    <div id="errors"></div>
+                                </div>
+                                <div style="display: none" id="alert" class="alert alert-danger" role="alert">
+                                    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                                    <span class="sr-only">Error:</span> <span class="msg"></span>
+                                </div>
+                                <div class="btn">
+                                    <a href="" type="submit" id="submit" class="signIn-btn">Sign In</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-item sign-up">
+                    <div class="table">
+                        <div class="table-cell">
+                            <h2>Register</h2>
+                            <form class="signup">
+                                <div class="form-group">
+                                    <input name="Username" id="username-input" placeholder="Username" type="text"
+                                        required />
+                                </div>
+                                <div class="form-group">
+                                    <input name="email" id="email-input" placeholder="Email" type="text" required />
+                                    <span class="error"></span>
+                                </div>
+                                <div class="form-group">
+                                    <input name="Password" id="password-input" placeholder="Password" type="Password"
+                                        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{10,}" required />
+                                </div>
+                                <!-- <div class="form-group">
+                                    <input class="form-input" type="password" id="psw-repeat-input"
+                                        placeholder="Repeat Password" name="psw-repeat" required />
+                                </div> -->
+                                <div class="noEmptyField"></div>
+                                <div class="missmatch"></div>
+                                <!-- express validator -->
+                                <div class="error-group">
+                                    <div id="errors"></div>
+                                </div>
+                                <div style="display: none" id="alert" class="alert alert-danger" role="alert">
+                                    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                                    <span class="sr-only">Error:</span> <span class="msg"></span>
+                                </div>
+                                <div class="btn">
+                                    <!-- <a href="" type="submit" id="submit" id="sign-up-btn" onSubmit="validateEmail();" -->
+                                    <a href="" id="submit" class="registerbtn">Sign
+                                        Up</a>
+                                </div>
+                                <div id="message">
+                                    <h5>Password must contain the following:</h5>
+                                    <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+                                    <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+                                    <p id="number" class="invalid">A <b>number</b></p>
+                                    <p id="length" class="invalid">Minimum <b>10 characters</b></p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script> -->
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> -->
+    <!-- Script -->
+    <script src="./javascript/signUp.js" type="text/javascript"></script>
+</body>
+
+</html>
